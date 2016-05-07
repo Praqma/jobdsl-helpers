@@ -1,0 +1,16 @@
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+    maven { url('http://repo.jenkins-ci.org/releases/') }
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:2.4.5"
+    compile "org.jenkins-ci.plugins:job-dsl:${project.ext.jobDslVersion}@jar"
+    compile "org.jenkins-ci.plugins:job-dsl-core:${project.ext.jobDslVersion}"
+    compile "org.jenkins-ci.plugins:gradle:${project.ext.gradlePluginVersion}@jar"
+    compile "org.jenkins-ci.plugins:git:2.4.0@jar"
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+}
