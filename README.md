@@ -4,7 +4,7 @@ Set of classes intented to simplify creation of readable and compact JobDSL scri
 For the real life usage examples check out [Jenkins as code reference project](https://github.com/Praqma/JenkinsAsCodeReference)
 Design inspired by Camilo Ribeiro and his [CDeasy](https://github.com/camiloribeiro/cdeasy) project
 
-### Examle
+### Example
 
 ```
 import net.praqma.jobdsl.helpers.JobBuilder
