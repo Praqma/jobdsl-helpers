@@ -1,0 +1,18 @@
+language: java
+
+cache:
+  directories:
+  - $HOME/.gradle
+
+branches:
+  only:
+    - /^ready\/.*$/
+
+before_script:
+  - sh -ex ci/before.sh
+
+script:
+  - ./gradlew test
+
+after_script:
+  - sh -ex ci/after.sh
