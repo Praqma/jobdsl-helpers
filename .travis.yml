@@ -4,23 +4,23 @@ jdk:
 
 install: /bin/true
 
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+    - $HOME/.gradle
 
 branches:
   only:
     - /^ready\/.*$/
 
-before_script:
-  - sh -ex ci/before.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "12c8071d2874"
+  - COMMIT_AUTHOR_NAME: "Praqma"
+  - COMMIT_AUTHOR_EMAIL: "no-reply@praqma.com"
+  - TARGET_BRANCH: "master"
+  - TARGET_REPO: "git@github.com:Praqma/jobdsl-helpers.git"
 
 script:
+  - bash -ex ci/before.sh
   - ./gradlew test
-
-after_script:
-  - sh -ex ci/after.sh
+  - bash -ex ci/after.sh
