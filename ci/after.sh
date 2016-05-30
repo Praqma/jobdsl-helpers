@@ -12,4 +12,4 @@ eval `ssh-agent -s`
 ssh-add depkey
 
 git push $TARGET_REPO HEAD:$TARGET_BRANCH
-git push $TRAVIS_REPO :$TRAVIS_BRANCH
+git push $TARGET_REPO :$TRAVIS_BRANCH
