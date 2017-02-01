@@ -1,5 +1,7 @@
 ---
-maintainer: andrey9kin, alexsedova
+maintainer: 
+ - andrey9kin
+ - alexsedova
 ---
 ### Intro
 
