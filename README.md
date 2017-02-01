@@ -1,3 +1,6 @@
+---
+maintainer: andrey9kin, alexsedova
+---
 ### Intro
 
 Set of classes intented to simplify creation of readable and compact JobDSL scripts.
